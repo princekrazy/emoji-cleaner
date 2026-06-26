@@ -14,8 +14,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "emoji-cleaner.removeEmojis",
-        "title": "Remove Emojis From File"
+        "command": "emoji-cleaner.cleanWholeFile",
+        "title": "Remove Emojis: Whole File"
+      },
+      {
+        "command": "emoji-cleaner.cleanSelection",
+        "title": "Remove Emojis: Selection"
+      },
+      {
+        "command": "emoji-cleaner.cleanLineRange",
+        "title": "Remove Emojis: Line Range"
       }
     ]
   },

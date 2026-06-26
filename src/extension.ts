@@ -1,34 +1,26 @@
 import * as vscode from "vscode";
+import { cleanWholeFile } from "./commands/cleanWholeFile";
+import { cleanSelection } from "./commands/cleanSelection";
+import { cleanLineRange } from "./commands/cleanLineRange";
 
 export function activate(context: vscode.ExtensionContext) {
-  const disposable = vscode.commands.registerCommand(
-    "emoji-cleaner.removeEmojis",
-    async () => {
-      const editor = vscode.window.activeTextEditor;
-
-      if (!editor) {
-        return;
-      }
-
-      const document = editor.document;
-      const text = document.getText();
-
-      const cleaned = text.replace(/[\p{Extended_Pictographic}]/gu, "");
-
-      const fullRange = new vscode.Range(
-        document.positionAt(0),
-        document.positionAt(text.length),
-      );
-
-      await editor.edit((editBuilder) => {
-        editBuilder.replace(fullRange, cleaned);
-      });
-
-      vscode.window.showInformationMessage("Emojis removed!");
-    },
+  const wholeFileCmd = vscode.commands.registerCommand(
+    "emoji-cleaner.cleanWholeFile",
+    cleanWholeFile,
   );
 
-  context.subscriptions.push(disposable);
+  const selectionCmd = vscode.commands.registerCommand(
+    "emoji-cleaner.cleanSelection",
+    cleanSelection,
+  );
+  const lineRangeCmd = vscode.commands.registerCommand(
+    "emoji-cleaner.cleanLineRange",
+    cleanLineRange,
+  );
+
+  context.subscriptions.push(lineRangeCmd);
+
+  context.subscriptions.push(wholeFileCmd, selectionCmd);
 }
 
 export function deactivate() {}
