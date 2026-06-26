@@ -1,8 +1,8 @@
-# 🧹 Emoji Cleaner
+# 🧹 Emoji Sanitizer
 
 A Visual Studio Code extension that removes emoji characters from source code quickly and efficiently.
 
-Whether you're cleaning copied code, preparing files for production, or enforcing coding standards, Emoji Cleaner provides simple commands to remove emojis from an entire file, a selected block of text, or a specific line range.
+Whether you're cleaning copied code, preparing files for production, or enforcing coding standards, Emoji Sanitizer provides simple commands to remove emojis from an entire file, a selected block of text, or a specific line range.
 
 ---
 
@@ -16,7 +16,7 @@ Whether you're cleaning copied code, preparing files for production, or enforcin
 
 ## Installation
 
-Install **Emoji Cleaner** from the Visual Studio Code Marketplace.
+Install **Emoji Sanitizer** from the Visual Studio Code Marketplace.
 
 Or install manually:
 
