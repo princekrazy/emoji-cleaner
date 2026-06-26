@@ -1,71 +1,129 @@
-# emoji-cleaner README
+# 🧹 Emoji Cleaner
 
-This is the README for your extension "emoji-cleaner". After writing up a brief description, we recommend including the following sections.
+A Visual Studio Code extension that removes emoji characters from source code quickly and efficiently.
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Whether you're cleaning copied code, preparing files for production, or enforcing coding standards, Emoji Cleaner provides simple commands to remove emojis from an entire file, a selected block of text, or a specific line range.
 
 ---
 
-## Following extension guidelines
+## Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- Remove emojis from an entire file
+- Remove emojis from selected text
+- Remove emojis from a specified line range
+- Fast, lightweight, and easy to use
+- Built with the Visual Studio Code Extension API and TypeScript
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## Installation
 
-## Working with Markdown
+Install **Emoji Cleaner** from the Visual Studio Code Marketplace.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+Or install manually:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+1. Download the latest `.vsix` release.
+2. Open Visual Studio Code.
+3. Open the Command Palette (`Ctrl+Shift+P`).
+4. Run:
 
-## For more information
+```
+Extensions: Install from VSIX...
+```
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+5. Select the downloaded package.
 
-**Enjoy!**
+---
+
+## Usage
+
+### Remove emojis from an entire file
+
+Open the Command Palette and run:
+
+```
+Remove Emojis: Whole File
+```
+
+---
+
+### Remove emojis from selected text
+
+1. Highlight the desired code.
+2. Open the Command Palette.
+3. Run:
+
+```
+Remove Emojis: Selection
+```
+
+---
+
+### Remove emojis from a line range
+
+1. Open the Command Palette.
+2. Run:
+
+```
+Remove Emojis: Line Range
+```
+
+3. Enter the starting and ending line numbers.
+
+---
+
+## Built With
+
+- TypeScript
+- Node.js
+- Visual Studio Code Extension API
+
+---
+
+## Project Structure
+
+```
+src/
+│
+├── commands/
+│   ├── cleanWholeFile.ts
+│   ├── cleanSelection.ts
+│   └── cleanLineRange.ts
+│
+├── emojiCleaner.ts
+│
+└── extension.ts
+```
+
+---
+
+## Why I Built This
+
+This project was created to learn the Visual Studio Code Extension API while building a practical developer tool.
+
+The extension demonstrates:
+
+- Command registration
+- Text editor manipulation
+- User input handling
+- Workspace editing
+- TypeScript development
+- Extension packaging and publishing
+
+---
+
+## Contributing
+
+Contributions, suggestions, and bug reports are welcome.
+
+If you have an idea for an improvement, feel free to open an issue or submit a pull request.
+
+---
+
+## 📄 License
+
+Licensed under the MIT License.
+
+---
+
+## Author
+
+**Prince Kuvenga**

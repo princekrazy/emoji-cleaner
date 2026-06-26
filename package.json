@@ -1,8 +1,19 @@
 {
   "name": "emoji-cleaner",
-  "displayName": "emoji-cleaner",
-  "description": "Emoji Cleaner is a Visual Studio Code extension that enforces clean code standards by detecting and removing emoji characters from source files. It integrates directly into the editor workflow to support consistent, production-ready code formatting and improve code readability across projects.",
-  "version": "0.0.1",
+  "displayName": "Emoji Cleaner",
+  "description": "A Visual Studio Code extension that removes emoji characters from entire files, selected text, or specified line ranges.",
+  "version": "1.0.0",
+  "publisher": "YOUR_PUBLISHER_NAME",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/princekrazy/emoji-cleaner"
+  },
+  "homepage": "https://github.com/princekrazy/emoji-cleaner",
+  "bugs": {
+    "url": "https://github.com/princekrazy/emoji-cleaner/issues"
+  },
   "engines": {
     "vscode": "^1.125.0"
   },
