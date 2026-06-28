@@ -1,6 +1,6 @@
 {
-  "name": "emoji-sanitizer",
-  "displayName": "Emoji Sanitizer",
+  "name": "emoji-sweeper",
+  "displayName": "Emoji Sweeper",
   "description": "A Visual Studio Code extension that removes emoji characters from entire files, selected text, or specified line ranges.",
   "version": "1.0.0",
   "publisher": "princekrazy",

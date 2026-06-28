@@ -9,3 +9,17 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+.vscode/**
+.vscode-test/**
+.vscode-test-web/**
+src/**
+tsconfig.json
+.gitignore
+.github/**
+.git/**
+node_modules/.cache/**
+**/*.map
+**/*.ts
+
+# Ignore VS Code debug profile
+~/**
